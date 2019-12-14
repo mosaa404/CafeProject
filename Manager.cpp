@@ -9,7 +9,7 @@ using namespace std;
 		cout << "Welcome Manager In Cafe" << endl;
 	}
 
-	void Manager::add_waiter(string name, string adress, int age, int sal) {
+	void Manager::add_waiter(string name, string adress, string age, string sal) {
 		this->name = name;
 		this->adress = adress;
 		this->age = age;
@@ -17,16 +17,20 @@ using namespace std;
 			}
 
 	int Manager::calc_salary(int time) {
-		if (time == 20) {
+		if(time<20&&time>0){
+			cout<<"You get no salary for this time :  ";
+			return 0;
+		}
+		else if (time == 20) {
 			return time * 70;
 		}
 		else if (time > 20 && time < 30) {
 			return time * 80;
 		}
-		else if (time > 30 && time < 40) {
+		else if (time >= 30 && time < 40) {
 			return time * 90;
 		}
-		else if (time > 40) {
+		else if (time >= 40) {
 			return time * 100;
 		}
 		else {
