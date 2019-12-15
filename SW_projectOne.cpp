@@ -10,7 +10,8 @@ using namespace std;
 int main(){
 
 	string name, password, user, address;
-	int age, time, salary;
+	string age ,salary;
+	int time;
 	int Choice1, Choice2, Choice3;
 
 	float total;
@@ -73,7 +74,7 @@ int main(){
 
 							getline(ifile, line);
 							cout << line << endl;
-							;
+							
 						}
 						ifile.close();
 					}
@@ -114,8 +115,7 @@ int main(){
 			else {
 				cout << "Enter The Correct Choice " << endl;
 			}
-			cout << "Are you Manager OR Employee ?\nManager = 1\nEmployee = 2\nEnter Your Choice :";
-			cin >> Choice1;
+		
 		}
 
 		/*---------- THE END OF MANAGER ----------- */
